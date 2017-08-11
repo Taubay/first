@@ -1,0 +1,10 @@
+.wrapper {
+    width:100%;
+    display: flex;
+    flex-flow: row wrap; /*тип если нет мест в горизонтали то скидывается вниз*/
+    background:#8389b7;
+    min-height:calc(100vh - 60px);
+    padding:20px;
+    display: flex;
+    justify-content:center;
+}

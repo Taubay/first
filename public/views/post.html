@@ -1,0 +1,28 @@
+<div class="info-post">
+    <div class="info-post--img">
+        <div class="info-ramm">
+            <img src="images/ramm.png">
+        </div>
+        <div class="info-post-img">
+            <img  ng-src="{{vm.item.img}}">
+        </div>
+    </div>
+    <div class="info-post--desc">
+        <div>
+            <span>Название:</span>
+            <p ng-bind="vm.item.title"></p>
+        </div>
+        <div>
+            <span>Срок:</span>
+            <p ng-bind="vm.item.age"></p>
+        </div>
+        <div>
+            <span>Пол автора:</span>
+            <p ng-bind="vm.item.gender"></p>
+        </div>
+        <div>
+            <span>Описанние:</span>
+            <p ng-bind="vm.item.description"></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="modalsign">
+    <div class="modalsign-wrapper">
+        <div class="sign-imgcross" bgcolor="red" >
+            <div class="log-imgcrossplace">
+                <img src="images/cancel.png" ng-click="$hide()">
+            </div>
+        </div>
+        <div class="sign-place">
+            <p> Log in</p>
+        </div>
+        <div class="allsign">
+            <div >
+                <input type="text" ng-model="vm.name" placeholder="name" />
+            </div>
+            <div >
+                <input type="text" ng-model="vm.surname" placeholder="surname" />
+            </div>
+            <div >
+                <input type="text" ng-model="vm.email" placeholder="mail" />
+            </div>
+            <div >
+                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.signgender"><span>Male</span>
+        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.signgender"><span>Female</span>
+            </div>
+        	<div >
+         	    <input type="text" ng-model="vm.password" placeholder="password"/>
+        	</div>
+        	<div >
+        		<input type="submit" value="ENTER" ng-click="vm.signup() ; $hide()"/>
+            </div>
+        </div>
+    </div>
+</div>

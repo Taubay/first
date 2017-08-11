@@ -1,0 +1,139 @@
+.blog{
+    background: #fff;
+    width:100%;}
+.blog.small {
+    background-image: url("../../images/forsmall.jpg");
+    width:20%;
+    justify-content: center;
+    border-radius: 9px;}
+.blog.big{ 
+    margin-left : 20px;
+    width:calc(80% - 20px);
+    border-radius: 9px;
+    background:#fff; }
+.imgava{
+    height:100px;
+    display: flex;
+    justify-content:center;}
+.imgava img{
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    justify-content: center;}
+.name{
+    height: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;}
+.description{
+    height: 20px;
+    width: 100%;
+    border-bottom:2px solid #8389b7;}
+.descriptionp{ 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.buttonfollow{    
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid #8389b7;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.buttonconnect{
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid #8389b7;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.statistic{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border-bottom:2px solid #8389b7;}
+.buttonC{
+    width:50%;
+    border-right:1px solid #8389b7;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.buttonF{
+    width:50%;
+    height:100%;
+    border-left:1px solid #8389b7;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.ssilki{
+    width: 100%;
+    height:80px;}
+.ssvk{
+    width:100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.ssfb{
+    width:100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.ssilki p:hover{
+     background: #0077b7;
+     color: #fff;}
+ .statistic p:hover{
+     background: #0077b7;
+     color: #fff;}
+ .buttonconnect:hover{
+     background: #0077b7;
+     color: #fff;}
+ .buttonfollow:hover{
+     background: #0077b7;
+     color: #fff;}
+ .user{
+    border-right:2px solid #8389b7;
+    border-bottom:2px solid #8389b7;
+    border-left:2px solid #8389b7;}
+ .user.blog{
+    width:100px;
+    height:100px;
+    border:2px;
+    padding: 5px;}
+.blog-title{
+    background: #8389b7;
+    width:100%;
+    height:50px;
+    display:flex;
+    border-bottom:2px solid #8389b7;
+    justify-content: space-between;   
+    align-items: center;}
+.posts{
+    width: calc(100% - 50px);
+    height: 100%;
+    border-right: 2px solid #8389b7;
+    border-radius: 9px;
+    background-image: url(../../images/forsmall.jpg);
+    color: #000000;
+    font-size: 30px;}
+.posts p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 4%;
+    width: 100%;
+    height: 100%;}
+.blog-title img{
+    padding: 10px;
+    width: 50px;
+    height: 100%;
+    background-image: url(../../images/forsmall.jpg);
+    border-radius: 9px;}
+.blog-title img:hover{
+    background: #0077b7;
+     color: #fff;
+     cursor:pointer;}

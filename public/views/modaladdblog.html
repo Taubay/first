@@ -1,0 +1,39 @@
+<div class="modal">
+    <div class="modal-wrapper">
+        <div class="imgcross" bgcolor="red" >
+            <div class="imgcrossplace">
+                <img src="images/cancel.png" ng-click="$hide()">
+            </div>
+        </div>
+        <div class="addname">
+    		<p>Create a new post</p>
+        </div>
+        <form ng-submit="vm.addPost(); $hide()" align="center" class="boginput">
+		    <div>
+	            <div class ="form-filed">
+    		        <span class="autoava">
+	      		        <img class ="form-filedimg" ng-src="{{vm.fakeimg}}">
+    		        </span>
+    				<input class="input-file" type="file" ng-model="myfile" base-sixty-four-input on-after-validate="vm.loadimg(myfile)">
+    		    </div>
+    			<div class="inputaddlog">
+    				<input type="text" ng-model="vm.title" placeholder="name" />
+    			</div>
+    			<div class="inputaddage">
+    				<input type="text" ng-model="vm.age" placeholder="age"/>
+    			</div>
+    			<div class="chooseaddgender">
+    				<span>GENDER:</span>
+    				<input type="radio" name="poll" id="poll" value="male" ng-model="vm.gender"><span>Male</span>
+    				<input type="radio" name="poll" id="poll" value="female" ng-model="vm.gender"><span>Female</span>
+    			</div>
+    			<div class="inputadddesc">
+    				<textarea ng-model="vm.description" placeholder="DESCRIPTION"></textarea>
+    			</div>
+    			<div class="addsubmit">
+    			<input type="submit" value="CREATE"/>
+                </div>
+            </div>
+     	</form>	    
+    </div>
+</div>

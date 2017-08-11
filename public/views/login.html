@@ -1,0 +1,21 @@
+<div class="modallog">
+    <div class="modallog-wrapper">
+        <div class="log-imgcross" bgcolor="red" >
+            <div class="log-imgcrossplace">
+                <img src="images/cancel.png" ng-click="$hide()">
+            </div>
+        </div>
+        <div class="login-place">
+            <p> Log in</p>
+        </div>
+        <div class="log-mail">
+    		<input type="text" ng-model="vm.email" placeholder="mail" />
+    	</div>
+    	<div class="log-password">
+    	    <input type="text" ng-model="vm.password" placeholder="password"/>
+    	</div>
+    	<div class="log-submit">
+    		<input type="submit" value="ENTER" ng-click="vm.login()"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.grid{
+    background-image: url(../../images/forsmall.jpg);
+    width: 100%;
+    padding: 40px 10px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 9px;}
+.grid-item{
+    border-radius: 9px;
+    width:200px;
+    padding: 10px;
+    cursor:pointer;
+    position:relative;}
+.grid-item--img{
+    width:100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background:#d7e0e7;
+    border-radius: 9px;}
+.grid-item--img img{
+    height: 200px;
+    border-radius: 9px;}
+.fullname{
+    width:100%;
+    color: #000000;
+    height: 20px;
+    font-size: 20px;
+    overflow: hidden;
+    display: flex;
+    padding: 0px 10px}
+.grid-item--subtitle{
+    font-size:15px;
+    line-height:15px;
+    color:#aba2a2;
+    padding: 0px 10px;}
+.grid-item:hover{
+    background:#76b2c5;}
+.grid-edit {
+    width:100%;
+    position:absolute; /*может залезать на другие блоги*/
+    top:-30px;
+    left:0;
+    height:30px;
+    display:none;
+    justify-content:flex-end;}
+.grid-edit span{
+    height:30px;
+    width:30px;
+    padding:7px;}
+.grid-edit span img{
+    width:100%;}
+.grid-item:hover .grid-edit{
+    display:flex;}

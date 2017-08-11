@@ -1,0 +1,96 @@
+
+			<div class="blog small" >
+				<div class="imgava">
+					<img src="images/myuserava.png">
+				</div>
+				<div class="name">
+					My Name
+				</div>
+				<div class="description">
+					<p class="descriptionp">job or hobby</p>
+				</div>
+				<div class="buttonfollow">
+					<p >FOLLOW</p>
+				</div>
+				<div class="buttonconnect">
+					<p>CONNECT</p>
+				</div>
+				<div class="statistic">
+						<p class="buttonC">Connections</p>
+						<p class="buttonF">Followers</p>
+				</div>
+				<div class="ssilki">
+						<p class="ssvk">vk.com/me</p>
+						<p class="ssfb">facebook.com/me</p>
+				</div>
+			</div>
+			<div class="blog big">
+				<div class="blog-title">
+					<div class="posts">
+						<p>POSTS</p>
+					</div>
+						<img ng-click="vm.open()" src="images/plus.png">
+				</div>
+				<div class="grid">
+					hiii
+					<div class="grid-item"  ng-repeat="item in vm.blogs" ui-sref="post({id: item._id})">
+						<div class="grid-edit">
+							<span >
+								<img ng-click="vm.correctblog(item);$event.stopPropagation()" src="images/correct.svg" >
+							</span>
+							<span ng-click="vm.deleteblog(item);$event.stopPropagation()">
+								<img src="images/garbage.svg">
+							</span>
+						</div>
+						<div class="grid-item--img">
+							<img ng-src="{{item.img}}">
+						</div>
+						<div class="fullname">
+						<p  ng-bind="item.title"></p>
+						</div>
+						<p class="grid-item--subtitle" ng-bind="item.date | date"></p>
+					</div>
+				</div>
+			</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--  	<div>-->
+		<!--			<form ng-submit="vm.addBlog()" align="center">-->
+		<!--				<h6> РЕГИСТРАЦИЯ</h6>-->
+		<!--				<div>-->
+		<!--				<div>-->
+		<!--					<span>LOGIN:</span>-->
+		<!--					<input type="text" ng-model="vm.title" align/>-->
+		<!--				</div>-->
+		<!--				<div>-->
+		<!--					<span>AGE:   </span>-->
+		<!--					<input type="text" ng-model="vm.age" />-->
+		<!--				</div>-->
+		<!--				<div>-->
+		<!--					<span>GENDER</span>-->
+		<!--					<input type="radio" name="poll" id="poll" value="male" ng-model="vm.gender">Male-->
+		<!--					<input type="radio" name="poll" id="poll" value="female" ng-model="vm.gender">Female-->
+		<!--				</div>-->
+		<!--				<div>-->
+		<!--					<span>YOURSELF DESCRIPTION</span>-->
+		<!--					<textarea ng-model="vm.description"></textarea>-->
+		<!--				</div>-->
+		<!--					<input type="submit" value="send"/>-->
+		<!--			</form>	    -->
+					
+
+		<!--		</div>-->
+		<!--</div>-->

@@ -1,0 +1,74 @@
+.modallog{
+    position: fixed; 
+    width: 100%;
+    height:100vh;
+    background: rgba( 0,0,0,0.6);
+    top:0;
+    left:0;
+    display:flex!important; /*библиотека модала мешает поэтому ставим приоритет*/
+    justify-content:center;
+    align-items: center;}
+.modallog-wrapper{
+    background-image: url(../../images/forsmall.jpg);
+    border-radius: 9px;
+    width:400px;
+    height:175px;}
+.log-imgcross{
+    width:100%;
+    height:20px;
+    right:0;
+    display:flex;
+    justify-content: flex-end;}
+.log-imgcrossplace{
+    width:18px;
+    height:18px;
+    border-radius: 9px;}
+.log-imgcross img{
+    width:100%;
+    height:100%;}
+.log-imgcrossplace :hover{
+    background:#0077b7;
+    border-radius: 9px;}
+.login-place{
+    height:30px;
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.login-place p{
+    font-size: 25px;}
+.log-mail{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.log-mail input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid rgb(173, 158, 75);}
+.log-password{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.log-password input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid rgb(173, 158, 75);}
+.log-submit{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height: 25px;}
+.log-submit input{
+    border: 2px solid rgb(173, 158, 75);
+    border-radius: 18px;
+    background-color: rgb(255, 255, 255);
+    color: #a9a9a9;}

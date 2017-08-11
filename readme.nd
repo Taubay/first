@@ -1,0 +1,31 @@
+how we started 
+1) termnal "nmp init"
+2.0) nmp install express -- save // node modules
+2.1) nmp install mongoose -- save
+2.1) nmp install morag -- save
+3) etc
+4) creat file"server.js"
+
+how to use morgo
+1) morgo // base of info
+2) show colletctions // cout coll
+3)db.blogs.find().pretty() // 
+
+how to open 
+
+
+
+
+in floder server server
+in floder piblic all for patients
+
+index cause file system was loooking for a fila "index"
+
+
+сначала подключаем ангуляр
+анг для супер красоты
+
+
+запуск базы данных монго 
+mongod --repair
+mongod --bind_ip=$IP --nojournal

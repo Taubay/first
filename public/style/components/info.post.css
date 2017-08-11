@@ -1,0 +1,49 @@
+.info-post{   
+    width: 100%;
+    border-radius: 9px;
+    background-image: url(../../images/forsmall.jpg);
+    display: flex;
+    justify-content: center;}
+.info-post--img{
+    width: 45%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.info-ramm{
+    height: 300px;
+    width: 300px;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;}
+.info-ramm img{
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:absolute;}
+.info-post-img {
+    height:250px;
+    width:250px;
+    z-index:1;}
+.info-post-img img{
+    width: 100%;
+    background:#fff;
+    height: 100%;}
+.info-post--desc{    
+    height: 320px;
+    width:55%;
+    display: grid;
+    justify-content:center;
+    align-items:center;}
+.info-post--desc div{
+    height: 75px;
+    min-width:296px;
+    display: flex;
+    background:#fff;
+    justify-content:space-around;
+    align-items:center;
+    border-radius: 15px;
+    border: 2px solid #c8b084;}
+.info-post--desc span{
+    font-size: 20px;}

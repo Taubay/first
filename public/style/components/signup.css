@@ -1,0 +1,54 @@
+.modalsign{
+    position: fixed; 
+    width: 100%;
+    height:100vh;
+    background: rgba( 0,0,0,0.6);
+    top:0;
+    left:0;
+    display:flex!important; /*библиотека модала мешает поэтому ставим приоритет*/
+    justify-content:center;
+    align-items: center;}
+.modalsign-wrapper{
+    background-image: url(../../images/forsmall.jpg);
+    border-radius: 9px;
+    width:400px;
+    height:400px;}
+.sign-imgcross{
+    width:100%;
+    height:20px;
+    right:0;
+    display:flex;
+    justify-content: flex-end;}
+.sign-imgcrossplace{
+    width:18px;
+    height:18px;
+    border-radius: 9px;}
+.sign-imgcross img{
+    width:100%;
+    height:100%;}
+.sign-imgcrossplace :hover{
+    background:#0077b7;
+    border-radius: 9px;}
+.sign-place{
+    height:30px;
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.sign-place p{
+    font-size: 25px;}
+.allsign{
+    width: 100%;
+    height: 350px;}
+.allsign div{
+    width:100%;
+    height:50px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.allsign input{
+    width: 50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid rgb(155, 224, 103);}

@@ -1,0 +1,19 @@
+.dropdown-menu{
+  position: absolute;
+  top:60px !important;
+  right:0;
+  left:inherit !important;
+  width:120px;
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+}
+.dropdown-menu li{
+  height: 40px;
+  line-height: 40px;
+  padding:0px 10px;
+  cursor:pointer;
+}
+.dropdown-menu li:hover{
+    background: #0077b7;
+     color: #fff;
+}

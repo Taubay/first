@@ -1,0 +1,179 @@
+.form-filed{
+    width:100%;
+    display: flex;
+    justify-content:center;}
+.autoava{
+    height:90px;
+    width:90px;
+    z-index:2;
+    position:absolute;
+    display: flex;
+    justify-content:center;
+    border-radius:5px;}
+.autoava img{
+    border-radius: 9px;
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:absolute;}
+.input-file {
+    opacity:0;
+    height:90px;
+    width:90px;
+    z-index: 3;}
+.inputaddlog{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.inputaddlog input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid rgb(155, 224, 103);}
+.inputaddsur{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.inputaddsur input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid rgb(155, 224, 103);}
+.inputaddage{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.inputaddage input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid rgb(155, 224, 103);}
+.chooseaddgender{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.chooseaddgender span{
+    color: rgba(0, 0, 0, 0.53);}
+.inputadddesc{
+    width: 100%;
+    height: 75px;}
+.inputadddesc textarea {
+    width: 75%;
+    height: 95%;
+    border: 2px solid rgb(155, 224, 103);
+    border-radius: 9px;}
+.addsubmit{
+    width:100%;
+    height: 25px;}
+.addsubmit input{
+    border: 2px solid #9be067;
+    border-radius: 18px;
+    background-color: rgba(155, 224, 103, 0.36);
+    color: #a9a9a9;}
+/*correct posts*/
+.Correct{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Correct p{
+    font-size: 26px;
+    color: rgb(31, 19, 19);
+}
+.cor-img{
+    width:100%;
+    display: flex;
+    justify-content:center;}
+.tipecor-img{
+    height:90px;
+    width:90px;
+    z-index:2;
+    position:absolute;
+    display: flex;
+    justify-content:center;
+    border-radius:5px;}
+.tipecor-img img{
+    border: 2px solid turquoise;
+    border-radius: 9px;
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:absolute;}
+.input-cor-img {
+    opacity:0;
+    height:90px;
+    width:90px;
+    z-index: 3;}
+.cor-name{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.cor-name input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid turquoise;}
+.cor-surname{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.cor-surname input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid turquoise;}
+.cor-age{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.cor-age input{
+    width:50%;
+    height: 30px;
+    font-size: x-large;
+    border-radius: 5px;
+    border: 2px solid turquoise;}
+.cor-gender{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.cor-gender span{
+    color: rgb(31, 19, 19);}
+.cor-description{
+    width: 100%;
+    height: 75px;}
+.cor-description textarea {
+    width: 75%;
+    height: 95%;
+    border: 2px solid turquoise;
+    border-radius: 9px;}
+.cor-submit{
+    width:100%;
+    height: 25px;}
+.cor-submit input{
+    border: 2px solid turquoise;
+    border-radius: 18px;
+    background-color: rgb(241, 238, 208);
+    color: #a9a9a9;}
