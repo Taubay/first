@@ -1,11 +1,9 @@
 
 			<div class="blog small" >
 				<div class="imgava">
-					<img src="images/myuserava.png">
+					<img class ="form-fileduserimg" ng-src="{{currentUser.img}}">
 				</div>
-				<div class="name">
-					My Name
-				</div>
+				<div class="name" ng-bind="currentUser.name"></div>
 				<div class="description">
 					<p class="descriptionp">job or hobby</p>
 				</div>
@@ -32,7 +30,6 @@
 						<img ng-click="vm.open()" src="images/plus.png">
 				</div>
 				<div class="grid">
-					hiii
 					<div class="grid-item"  ng-repeat="item in vm.blogs" ui-sref="post({id: item._id})">
 						<div class="grid-edit">
 							<span >

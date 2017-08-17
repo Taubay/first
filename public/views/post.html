@@ -1,28 +1,63 @@
-<div class="info-post">
-    <div class="info-post--img">
-        <div class="info-ramm">
-            <img src="images/ramm.png">
+<div class="postdata">
+    <div class="info-post">
+        <div class="info-post--img">
+            <div class="info-ramm">
+                <img src="images/ramm.png">
+            </div>
+            <div class="info-post-img">
+                <img  ng-src="{{vm.item.img}}">
+            </div>
         </div>
-        <div class="info-post-img">
-            <img  ng-src="{{vm.item.img}}">
+        <div class="info-post--desc">
+            <div>
+                <span>Название:</span>
+                <p ng-bind="vm.item.title"></p>
+            </div>
+            <div>
+                <span>Дата:</span>
+                <p ng-bind="vm.item.date | date"></p>
+            </div>
+            <!--<div>-->
+            <!--    <span>Автор:</span>-->
+            <!--    <p ng-bind="vm.item.user"></p>-->
+            <!--</div>-->
+            <div>
+                <span>Описанние:</span>
+                <p ng-bind="vm.item.description"></p>
+            </div>
         </div>
     </div>
-    <div class="info-post--desc">
-        <div>
-            <span>Название:</span>
-            <p ng-bind="vm.item.title"></p>
+    <div class="rate-post">
+        <div class="post-comment">
+            <div class="commTitle">
+                <p >Написать комментарий</p>
+            </div>
+            <div class="inputcomm">
+                <textarea placeholder="input for comment" ng-model="vm.comm" class="input-comment"/></textarea>
+                <input type="submit" class="subcomm"ng-click="vm.comment(); $hide"/>
+            </div>
+            <div class="postallcomments" ng-repeat =" item in vm.allcomms" > 
+                <div class="comm2p">
+                    <p class="commp1" ng-bind="item.user.name"></p> 
+                    <p class="commp2" ng-bind="item.description"></p> 
+                </div>
+            </div>
         </div>
-        <div>
-            <span>Срок:</span>
-            <p ng-bind="vm.item.age"></p>
-        </div>
-        <div>
-            <span>Пол автора:</span>
-            <p ng-bind="vm.item.gender"></p>
-        </div>
-        <div>
-            <span>Описанние:</span>
-            <p ng-bind="vm.item.description"></p>
+        <div class="likes-post" ng-click="vm.myLike()">
+            <div class="post-place">
+            <!--<div ng-repeat="item in vm.alllikes">-->
+                <!--<p ng-if="vm.mylike" > 1 </p> -->
+                <!--<p ng-if="!vm.mylike" > 0 </p> -->
+            <!--</div>-->
+                <p ng-bind="vm.alllikes"></p>
+            </div>
+            <p class="likeQ">Who Liked?</p>
+            <div class="personWhoLiked" >
+                <div ng-repeat="item in vm.alllikes">
+                    <p ng-bind="item.user.name"> </p> 
+                </div>
+            </div>
         </div>
     </div>
 </div>
+            <!--<img src="images/like.png" >-->

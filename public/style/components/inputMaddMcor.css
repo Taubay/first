@@ -33,38 +33,6 @@
     font-size: x-large;
     border-radius: 5px;
     border: 2px solid rgb(155, 224, 103);}
-.inputaddsur{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items:center;}
-.inputaddsur input{
-    width:50%;
-    height: 30px;
-    font-size: x-large;
-    border-radius: 5px;
-    border: 2px solid rgb(155, 224, 103);}
-.inputaddage{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items:center;}
-.inputaddage input{
-    width:50%;
-    height: 30px;
-    font-size: x-large;
-    border-radius: 5px;
-    border: 2px solid rgb(155, 224, 103);}
-.chooseaddgender{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items:center;}
-.chooseaddgender span{
-    color: rgba(0, 0, 0, 0.53);}
 .inputadddesc{
     width: 100%;
     height: 75px;}
@@ -129,38 +97,6 @@
     font-size: x-large;
     border-radius: 5px;
     border: 2px solid turquoise;}
-.cor-surname{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items:center;}
-.cor-surname input{
-    width:50%;
-    height: 30px;
-    font-size: x-large;
-    border-radius: 5px;
-    border: 2px solid turquoise;}
-.cor-age{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items:center;}
-.cor-age input{
-    width:50%;
-    height: 30px;
-    font-size: x-large;
-    border-radius: 5px;
-    border: 2px solid turquoise;}
-.cor-gender{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content:center;
-    align-items:center;}
-.cor-gender span{
-    color: rgb(31, 19, 19);}
 .cor-description{
     width: 100%;
     height: 75px;}

@@ -1,10 +1,11 @@
 angular.module("decode")
 .controller("ProfileCtrl", ProfileCtrl);
-ProfileCtrl.$inject = ["$http", "$modal" , "userdata"]; // подключение
-function ProfileCtrl ($http , $modal , userdata ) 
+ProfileCtrl.$inject = ["$http", "$modal"]; // подключение
+function ProfileCtrl ($http , $modal ) 
 {
     var vm = this;
     console.log("in profilectrl" );
+    //console.log(userdata);
     vm.addBlog = function(){
         $http.post('/api/blogs', 
             {
@@ -18,7 +19,6 @@ function ProfileCtrl ($http , $modal , userdata )
             })
     }
     $http.get('/api/blogs').success(function(blogs){
-        console.log("in prctrl is ok");
         vm.blogs = blogs;
         console.log(vm.blogs);
     })
@@ -33,7 +33,7 @@ function ProfileCtrl ($http , $modal , userdata )
         })
     }
     
-    vm.open = function (){
+    vm.open = function (){ 
     var open=$modal({
         container: "body",
         templateUrl: "views/modaladdblog.html" , 
@@ -52,7 +52,6 @@ function ProfileCtrl ($http , $modal , userdata )
     }
     vm.correctblog = function(itemcorrect){
           console.log(itemcorrect);
-          console.log("in ctrlpof all is ok");
         var open=$modal({
             container: "body",
             templateUrl: "views/modalcorrectblog.html" , 

@@ -20,10 +20,11 @@
 				</ul>
 			</div>
 			<div class="avatar" ng-if="vm.newuser" >
-				<img src="images/user.png" bs-dropdown>
+			<img  ng-src="{{currentUser.img}}" bs-dropdown>
 				<ul class="dropdown-menu" role="menu">
 					<li ng-click="vm.logout()">LOGOUT</li>
 					<li ng-click="vm.settings()">SETTINGS</li>
+					<li ng-click="vm.deleteUser()">DELETE</li>
 				</ul>
 			</div>
 		</header>
@@ -36,15 +37,18 @@
 	    <script type="text/javascript" src="js/vendor/ng-strap.js"></script>   <!--connect to server  -->
 	    <script type="text/javascript" src="js/vendor/ng-strap.min.js"></script>   <!--connect to server  -->	 
 	    <script type="text/javascript" src="app.js"></script> <!--connect to server  -->
+	    <script type="text/javascript" src="js/directives/directive.file-upload.js"></script> <!--connect to server  -->
 	    <script type="text/javascript" src="js/controllers/views/controller.profile.js"></script>   <!--connect to server  -->
 	    <script type="text/javascript" src="js/controllers/views/controller.modaladdblog.js"></script>
 	    <script type="text/javascript" src="js/controllers/views/controller.post.js"></script>   <!--connect to server  -->
 	    <script type="text/javascript" src="js/controllers/views/controller.modalcorrectblog.js"></script>
 	    <script type="text/javascript" src="js/controllers/views/controller.header.js"></script>
 	    <script type="text/javascript" src="js/controllers/views/controller.home.js"></script>
+	    <script type="text/javascript" src="js/controllers/views/controller.user.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/controller.login.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/controller.signup.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/controller.settings.js"></script>
+	    <script type="text/javascript" src="js/controllers/auth/controller.delete.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/service.auth.js"></script>
 	</body>
 </html>

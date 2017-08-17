@@ -1,7 +1,8 @@
-.info-post{   
+.postdata{
     width: 100%;
     border-radius: 9px;
-    background-image: url(../../images/forsmall.jpg);
+    background-image: url(../../images/forsmall.jpg);}
+.info-post{   
     display: flex;
     justify-content: center;}
 .info-post--img{
@@ -37,7 +38,7 @@
     justify-content:center;
     align-items:center;}
 .info-post--desc div{
-    height: 75px;
+    height: 85px;
     min-width:296px;
     display: flex;
     background:#fff;
@@ -47,3 +48,90 @@
     border: 2px solid #c8b084;}
 .info-post--desc span{
     font-size: 20px;}
+.rate-post{
+    width:100%; 
+    display: flex;
+    justify-content:center;
+    align-items:center;}
+.post-comment {
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    width:45%;
+    min-height:190px;}
+.input-comment{
+    width:200px;
+    height:90px;
+    border-radius: 9px;
+    border: 2px solid #c8b084;}
+.commTitle p {
+    display: flex;
+    font-size: 20px;
+    justify-content:center;
+    color:#844a1a;}
+.inputcomm{
+    display: inherit;
+    width: 100% !important;
+    padding: 0px 40px;
+    width: 200px;}
+.inputcomm input{
+    border-radius: 9px;
+     width: 200px;
+    border: 2px solid #965b28;}
+.postallcomments{
+    min-width: 280px;
+    height:40px;
+    flex-flow: row wrap;
+    display:flex;
+    justify-content:center;
+    align-items:center;}
+.comm2p{
+    min-width: 80%;
+    min-height: 35px;
+    background: #fff;
+    border: 1px solid #b98932;
+    border-radius:9px;
+    display: grid;
+    justify-content: center;}
+.commp1{
+    min-width:20px;
+    color:#965b28;
+    font-size:15px;}
+.commp2{
+    min-width:20px;
+    color:chocolate;
+    font-size:12px;}
+.likes-post{
+    width:55%;
+    height: 190px;
+    display: grid;
+    justify-content: center;}
+.post-place{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #c8b084;
+    background-color: #fff;
+    width: 120px;
+    height: 40px;}
+.personWhoLiked{
+    display:grid;
+    justify-content: center;
+    align-items: center;}
+.personWhoLiked p{
+    width:100px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid #b17f47;}
+.post-place:hover{
+    background-color: #0077b7;}
+.likeQ{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;}

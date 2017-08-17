@@ -1,0 +1,66 @@
+.modal-delete{
+    position: fixed; 
+    width: 100%;
+    height:100vh;
+    background: rgba( 0,0,0,0.6);
+    top:0;
+    left:0;
+    display:flex!important; /*библиотека модала мешает поэтому ставим приоритет*/
+    justify-content:center;
+    align-items: center;}
+.modal-wrapper-delete{
+    background-image: url(../../images/forsmall.jpg);
+    border-radius: 9px;}
+.imgcross-delete{
+    width:100%;
+    height:20px;
+    right:0;
+    display:flex;
+    justify-content: flex-end;}
+.imgcrossplace-delete{
+    width:18px;
+    height:18px;
+    border-radius: 9px;}
+.imgcross-delete img{
+    width:100%;
+    height:100%;}
+.imgcrossplace-delete :hover{
+    background:#0077b7;
+    border-radius: 9px;}
+.delete-ques{
+    height:55px;
+    width:290px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom: 2px solid  #c8b084;}
+.choose-ans{
+    height:55px;
+    width:290px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;}
+.choose-ans p{
+    border-right:1px solid #c8b084; 
+    width:50%;
+    display: flex;
+    justify-content:center;
+    cursor: pointer;
+    align-items:center;
+    height: 100%;}
+.choose-ans span{
+    border-left:1px solid #c8b084; 
+    width:50%;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100%;}
+.choose-ans p:hover{
+    background-color: #0077b7;
+    color: #fff;
+    border-bottom-left-radius: 9px;}
+.choose-ans span:hover{
+    background-color: #0077b7;
+    border-bottom-right-radius: 9px;
+    color: #fff;}

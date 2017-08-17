@@ -9,24 +9,30 @@
             <p> SETTINGS</p>
         </div>
         <div class="allSettings">
+            <div class ="form-filed">
+    		        <!--<span class="autoava">-->
+	      		     <!--   <img class ="form-filedimg" ng-src="{{vm.fakeAva}}">-->
+    		        <!--</span>-->
+    				<input class="input-file" type="file" file-model="vm.file" >
+    		 </div>
             <div>
-                <input type="text" ng-model="vm.name" placeholder="name" />
+                <input type="text" ng-model="vm.newuserdata.name" placeholder="name" />
             </div>
             <div>
-                <input type="text" ng-model="vm.surname" placeholder="surname" />
+                <input type="text" ng-model="vm.newuserdata.surname" placeholder="surname" />
             </div>
             <div>
-                <input type="text" ng-model="vm.email" placeholder="mail" />
+                <input type="text" ng-model="vm.newuserdata.email" placeholder="mail" />
             </div>
-            <div>
-                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.signgender"><span>Male</span>
-        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.signgender"><span>Female</span>
+            <div class="change-gender">
+                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.newuserdata.gender"><span>Male</span>
+        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.newuserdata.gender"><span>Female</span>
             </div>
         	<div>
-         	    <input type="text" ng-model="vm.password" placeholder="password"/>
+         	    <input type="text" ng-model="vm.newuserdata.password" placeholder="password"/>
         	</div>
         	<div>
-        		<input type="submit" value="ENTER" ng-click="vm.signup() ; $hide()"/>
+        		<input type="submit" value="CHANGE" ng-click="vm.changedata() ; $hide()"/>
             </div>
         </div>
     </div>

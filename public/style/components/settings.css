@@ -52,3 +52,10 @@
     font-size: x-large;
     border-radius: 5px;
     border: 2px solid rgb(155, 224, 103);}
+.change-gender span{
+    padding: 0px 9px;
+}
+.change-gender input{
+    width: 20px !important;
+    height: 20px !important;
+}

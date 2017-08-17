@@ -1,6 +1,4 @@
-.blog{
-    background: #fff;
-    width:100%;}
+
 .blog.small {
     background-image: url("../../images/forsmall.jpg");
     width:20%;
@@ -10,7 +8,7 @@
     margin-left : 20px;
     width:calc(80% - 20px);
     border-radius: 9px;
-    background:#fff; }
+    background-image: url(../../images/forsmall.jpg); }
 .imgava{
     height:100px;
     display: flex;
@@ -116,7 +114,7 @@
     width: calc(100% - 50px);
     height: 100%;
     border-right: 2px solid #8389b7;
-    border-radius: 9px;
+    border-top-left-radius: 9px;
     background-image: url(../../images/forsmall.jpg);
     color: #000000;
     font-size: 30px;}
@@ -132,7 +130,7 @@
     width: 50px;
     height: 100%;
     background-image: url(../../images/forsmall.jpg);
-    border-radius: 9px;}
+    border-top-right-radius: 9px;}
 .blog-title img:hover{
     background: #0077b7;
      color: #fff;

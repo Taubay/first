@@ -1,15 +1,12 @@
 <div class="postshome">
-	<div ng-repeat="post in vm.posts" class="postshome-item" ui-sref="post({id: post._id})">
-		<div class="postshome-item--img">
-	    <img ng-src="{{post.img}}">
-		</div>
-		<div class="postshomefullname">
-		<p  ng-bind="post.title"></p>
-		</div>
-		<div class="postshome-age">
-			<p>AGE:</p>
-			<p ng-bind="post.age"></p>
-		</div>
-		<p class="postshome-item--subtitle" ng-bind="post.date | date"></p>
+		<div ng-repeat="post in vm.posts" class="postshome-item" ui-sref="post({id: post._id})">
+			<div class="postshome-item--img">
+		    <img ng-src="{{post.img}}">
+			</div>
+			<div class="postshomefullname">
+				<p ng-bind="post.user.name" ui-sref='user({id:post.user._id})' ng-click="$event.stopPropagation()"></p>
+				<p ng-bind="post.title"></p>
+			</div>
+			<p class="postshome-item--subtitle" ng-bind="post.date | date"></p>
 	</div>
 </div>

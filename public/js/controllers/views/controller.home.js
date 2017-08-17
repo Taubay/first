@@ -5,7 +5,7 @@ function HomeCtrl ($http)
 {
     var vm = this;
     // vm.user = true ;
-    $http.get('/api/blogs').success(function(blogs){
+    $http.get('/api/blogs/home/all').success(function(blogs){
         console.log(blogs);
         vm.posts = blogs ; 
     })

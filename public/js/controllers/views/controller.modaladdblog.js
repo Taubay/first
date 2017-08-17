@@ -5,7 +5,7 @@ function Modaladdblog ($http , items)
 {
     var vm = this;
     vm.fakeimg  = "images/folder.png";
-    vm.img = "images/autoava.jpg";
+    vm.img = "images/kirpich.jpg";
     vm.addPost = function(){
                 $http.post('/api/blogs', 
             {

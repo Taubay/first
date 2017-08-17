@@ -1,0 +1,48 @@
+.myuserpage{
+    width: 100%;
+    border-radius: 9px; 
+    display: flex;
+    justify-content: center;
+    background-image: url(../../images/forsmall.jpg);}
+.info-user--img{
+    width: 45%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.user-ramm{
+    height: 300px;
+    width: 300px;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;}
+.user-ramm img{
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:absolute;}
+.info-user-img {
+    height:250px;
+    width:250px;
+    z-index:1;}
+.info-user-img img{
+    width: 100%;
+    background:#fff;
+    height: 100%;}  
+.user-data{
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 55%;}
+.user-data div {
+    min-width:300px;
+    height: 65px;
+    display: flex;
+    background: #fff;
+    justify-content:space-around;
+    border-radius: 15px;
+    border: 2px solid #c8b084;
+    align-items:center;
+}

@@ -29,3 +29,13 @@ index cause file system was loooking for a fila "index"
 запуск базы данных монго 
 mongod --repair
 mongod --bind_ip=$IP --nojournal
+
+
+
+
+
+
+
+
+fs - работа с файлами 
+mulder - выбирает где сохранятьы

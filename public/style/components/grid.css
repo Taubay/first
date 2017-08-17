@@ -1,10 +1,8 @@
 .grid{
-    background-image: url(../../images/forsmall.jpg);
     width: 100%;
     padding: 40px 10px 10px;
     display: flex;
-    flex-flow: row wrap;
-    border-radius: 9px;}
+    flex-flow: row wrap;}
 .grid-item{
     border-radius: 9px;
     width:200px;

@@ -8,22 +8,28 @@
         <div class="sign-place">
             <p> Log in</p>
         </div>
+        <div class="user-img">
+            <span class="user-ava">
+  		        <img class ="form-fileduserimg" ng-src="{{vm.fakeava}}">
+	        </span>
+			<input class="user-input-file" type="file" ng-model="myfileuser">
+        </div>
         <div class="allsign">
             <div >
-                <input type="text" ng-model="vm.name" placeholder="name" />
+                <input type="text" ng-model="vm.user.name" placeholder="name" />
             </div>
             <div >
-                <input type="text" ng-model="vm.surname" placeholder="surname" />
+                <input type="text" ng-model="vm.user.surname" placeholder="surname" />
             </div>
             <div >
-                <input type="text" ng-model="vm.email" placeholder="mail" />
+                <input type="text" ng-model="vm.user.email" placeholder="mail" />
             </div>
-            <div >
-                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.signgender"><span>Male</span>
-        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.signgender"><span>Female</span>
+            <div class="sign-gender" >
+                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.user.gender"><span>Male</span>
+        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.user.gender"><span>Female</span>
             </div>
         	<div >
-         	    <input type="text" ng-model="vm.password" placeholder="password"/>
+         	    <input type="text" ng-model="vm.user.password" placeholder="password"/>
         	</div>
         	<div >
         		<input type="submit" value="ENTER" ng-click="vm.signup() ; $hide()"/>

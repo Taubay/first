@@ -12,7 +12,7 @@
     background-image: url(../../images/forsmall.jpg);
     border-radius: 9px;
     width:400px;
-    height:400px;}
+    height:360px;}
 .sign-imgcross{
     width:100%;
     height:20px;
@@ -37,6 +37,29 @@
     align-items:center;}
 .sign-place p{
     font-size: 25px;}
+.user-img{
+    width:100%;
+    display: flex;
+    justify-content:center;}
+.user-ava{
+    height:90px;
+    width:90px;
+    z-index:2;
+    position:absolute;
+    display: flex;
+    justify-content:center;
+    border-radius:5px;}
+.user-ava img{
+    border-radius: 9px;
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:absolute;}
+.user-input-file {
+    opacity:0;
+    height:90px;
+    width:90px;
+    z-index: 3;}
 .allsign{
     width: 100%;
     height: 350px;}
@@ -52,3 +75,11 @@
     font-size: x-large;
     border-radius: 5px;
     border: 2px solid rgb(155, 224, 103);}
+.sign-gender input{
+    width:20px;
+    height: 20px;}
+.sign-gender span{
+    padding: 0px 15px;
+    font-size: 18px;
+}
+    

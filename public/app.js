@@ -26,5 +26,11 @@ angular.module('decode', [
       controller: 'HomeCtrl',
   controllerAs: 'vm'
   })
+  .state('user', {
+  url: '/user/:id',
+  templateUrl: 'views/user.html',
+  controller: 'UserCtrl',
+  controllerAs: 'vm'
+  })
   console.log("2");
 };

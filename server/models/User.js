@@ -1,6 +1,7 @@
 var mongoose = require("mongoose") ;
 var bcrypt = require("bcryptjs");
 var userSchema = new mongoose.Schema({
+    img: String ,
     name: String, 
     surname: String,
     age: String,
@@ -9,7 +10,7 @@ var userSchema = new mongoose.Schema({
     password: String,
     date : {type:Date, default : Date.now}
 })
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function(next) { // перед сохранением юзера и шифрует пароль
     var user = this;
     if (!user.isModified('password')) return next();
     bcrypt.genSalt(10, function(err, salt) {
@@ -22,6 +23,7 @@ userSchema.pre('save', function(next) {
     });
 });
 
+//при авторизции сравнивает пароли 
 userSchema.methods.comparePassword = function(candidatePassword, cb) {
     bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
         if (err) return cb(err);

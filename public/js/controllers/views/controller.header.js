@@ -48,4 +48,16 @@ function HeaderCtrl ($http , $modal , Auth , $rootScope)
         open.show();
     })
     }
+    vm.deleteUser = function(){
+    var open=$modal({
+        container: "body",
+        templateUrl: "views/deleteUser.html" , 
+        controller: "DeleteUserCtrl",
+        controllerAs: "vm" , 
+        show: false,
+    })
+    open.$promise.then(function(){
+        open.show();
+    })  
+    }
 }

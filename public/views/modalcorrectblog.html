@@ -1,7 +1,6 @@
 <div class="modalcor">
     <div class="modalcor-wrapper">
         <form  align="center" ng-submit="vm.correctPost(); $hide()">
-    		<div>
     		    <div class="imgcancel">
     		        <div class="imgcancelplace">
     		            <img src="images/cancel.png" ng-click="$hide()">
@@ -10,30 +9,21 @@
     		    <div class="Correct">
     		        <p>Correct post</p>
     		    </div>
-    			<div class="cor-img">
+    		   	<div class="cor-img">
     			    <div class="tipecor-img">
     		            <img class="nowava" ng-src="{{vm.blog.img}}" width="100px" height="120px">
     		        </div>
     		        <input class="input-cor-img" type="file" ng-model="mynewfile" base-sixty-four-input on-after-validate="vm.correctimg(mynewfile)">
     		    </div>
-    			<div class="cor-name">
-    				<input type="text" ng-model="vm.blog.title" placeholder="name" />
-    			</div>
-    			<div class="cor-age">
-    				<input type="text" ng-model="vm.blog.age" placeholder="age"/>
-    			</div>
-    			<div class="cor-gender">
-    				<span>GENDER:</span>
-    				<input type="radio" name="poll" id="poll" value="male" ng-model="vm.blog.gender">Male
-    				<input type="radio" name="poll" id="poll" value="female" ng-model="vm.blog.gender">Female
-    			</div>
-    			<div class="cor-description">
-    				<textarea ng-model="vm.blog.description" placeholder="description"></textarea>
-    			</div>
+        			<div class="cor-name">
+        				<input type="text" ng-model="vm.blog.title" placeholder="name" />
+        			</div>
+        			<div class="cor-description">
+        				<textarea ng-model="vm.blog.description" placeholder="description"></textarea>
+        			</div>
     			<div class="cor-submit">
     			    <input type="submit" value="CORRECT" />
                 </div>
-            </div>
      	</form>	    
     </div>
 </div>
