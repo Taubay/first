@@ -12,9 +12,22 @@ router.post('/:idcomm', function(req, res, next) {
         })
     })
 router.get('/:idallcomms' , function(req, res, next) {
-    Comment.find({blog:req.params.idallcomms}).populate('user' , 'name surname').exec(function(err , comments){
+    Comment.find({blog:req.params.idallcomms}).populate('user' , 'name img').exec(function(err , comments){
         res.status(200).send(comments);
     })
+})
+router.delete('/one/:idcomm',function(req,res,next){
+        Comment.remove({_id:req.params.idcomm}).exec(function(err){
+            res.status(200).end();
+        })
+})
+router.put('/correct/:idcomm',function(req,res,next){
+        Comment.findById(req.params.idcomm).exec(function(err , corComment){
+            corComment.description = req.body.description ;
+            corComment.save(function(){
+                res.status(200).end();
+            })
+        })
 })
 
 module.exports = router ;

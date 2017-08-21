@@ -6,8 +6,6 @@ function Modalcorrectblog ($http , item)
     var vm = this;
     vm.blog = item;
     vm.correctimg = function(mynewfile){
-        console.log(mynewfile);
-        console.log("all is ok");
         vm.blog.img = "data:image/png;base64," + mynewfile.base64;
     }
         vm.correctPost = function(){

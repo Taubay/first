@@ -19,6 +19,13 @@
 					<li ng-if="!vm.newuser" ng-click="vm.signup()" >SIGNUP</li>
 				</ul>
 			</div>
+			<div class="nav-search">
+				<input type="text" placeholder="search" ng-model="vm.search" ng-keyup="vm.find()"/>
+				<img src="images/search.svg">
+				<ul class="search-dropdown" ng-if='vm.dataSearch && vm.dataSearch.length>0'>
+					<li ng-repeat="item in vm.dataSearch" ng-bind="item.title" ui-sref="post({id:item._id})" ng-click="vm.dataSearch = [] ; vm.search = null"></li>
+				</ul>
+			</div>
 			<div class="avatar" ng-if="vm.newuser" >
 			<img  ng-src="{{currentUser.img}}" bs-dropdown>
 				<ul class="dropdown-menu" role="menu">
@@ -49,6 +56,7 @@
 	    <script type="text/javascript" src="js/controllers/auth/controller.signup.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/controller.settings.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/controller.delete.js"></script>
+	    <script type="text/javascript" src="js/controllers/views/controller.editComm.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/service.auth.js"></script>
 	</body>
 </html>

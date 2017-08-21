@@ -6,14 +6,14 @@
             </div>
         </div>
         <div class="sign-place">
-            <p> Log in</p>
+            <p> Sign up</p>
         </div>
-        <div class="user-img">
-            <span class="user-ava">
-  		        <img class ="form-fileduserimg" ng-src="{{vm.fakeava}}">
-	        </span>
-			<input class="user-input-file" type="file" ng-model="myfileuser">
-        </div>
+           <div class ="form-filed">
+		        <span class="autoava">
+      		        <img id="coutAva"class ="form-filedimg" ng-src="{{vm.user.img}}">
+		        </span>
+				<input id="img-ava" class="input-file" type="file" file-model="vm.file" >
+		 </div>
         <div class="allsign">
             <div >
                 <input type="text" ng-model="vm.user.name" placeholder="name" />

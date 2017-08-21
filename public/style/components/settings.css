@@ -12,7 +12,7 @@
     background-image: url(../../images/forsmall.jpg);
     border-radius: 9px;
     width:400px;
-    height:400px;}
+    height:445px;}
 .Settings-imgcross{
     width:100%;
     height:20px;
@@ -53,9 +53,26 @@
     border-radius: 5px;
     border: 2px solid rgb(155, 224, 103);}
 .change-gender span{
-    padding: 0px 9px;
-}
+    padding: 0px 9px;}
 .change-gender input{
     width: 20px !important;
-    height: 20px !important;
-}
+    height: 20px !important;}
+.changeAvaSettings{
+    width: 100% !important;
+    height: 95px !important;}
+.PlaceImgSett{
+    width: 95px;
+    height: 95px;}
+.ValidAvaSett{
+    width: 95px;
+    height: 95px;
+    z-index:2;
+    border-radius: 18px;
+    position:absolute;}
+.inputAvasett{
+    width: 95px !important;
+    height: 95px !important;
+    z-index:3;
+    opacity: 0;
+    position:absolute;}
+

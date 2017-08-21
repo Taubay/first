@@ -2,7 +2,12 @@ var express = require('express')
 var router = express.Router()
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-
+var fs = require('fs');
+var multer = require ( 'multer');
+var upload = multer({
+    dest:"public/images/userava"
+})
+var path = require("path");
 
 var User = require("../models/User.js");
 // Passport local
@@ -47,9 +52,8 @@ router.use(function(req, res, next) {
     next();
 })
 
-router.post('/api/signup' ,function(req , res , next ){
+router.post('/api/signup' , upload.single('image') ,function(req , res , next ){
     new User ({
-        img: req.body.img,
         name: req.body.name ,
         surname: req.body.surname,
         age: req.body.age,
@@ -58,10 +62,33 @@ router.post('/api/signup' ,function(req , res , next ){
         password:req.body.password
     })
     .save(function(err, user){ // save changes base in blog 
-    req.login(user, function(err) {
-        if (err)  done(err, user);
-        return res.json(user);
-    });
+        if(req.file) {
+             var tempPath = req.file.path;
+        
+            var targetPath = path.resolve('public/images/userava/'+   user._id +'.'+req.file.originalname.split('.').slice(-1).pop());
+            
+            fs.rename(tempPath, targetPath, function(err) {
+                if (err) return next(err);
+            });
+            
+            user.img = 'images/userava/'+   user._id +'.'+req.file.originalname.split('.').slice(-1).pop() ;
+            user.save(function(err , newuser){
+                 req.login(user, function(err) {
+                    if (err)  done(err, newuser);
+                    return res.json(newuser);
+                });
+            })  
+        } else {
+            user.img = 'images/autoava.jpg';
+            user.save(function(err , newuser){
+                 req.login(user, function(err) {
+                    if (err)  done(err, newuser);
+                    return res.json(newuser);
+                });
+            })  
+        }
+       
+   
     })
 })
 router.post('/api/login', passport.authenticate('local'), function(req, res) {

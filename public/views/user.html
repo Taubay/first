@@ -1,26 +1,41 @@
 <div class="myuserpage">
-    <div class="info-user--img">
-        <div class="user-ramm">
-            <img src="images/ramm2.png">
+    <div class="dataUser">
+        <div class="info-user--img">
+            <div class="user-ramm">
+                <img src="images/ramm2.png">
+            </div>
+            <div class="info-user-img">
+                <img  ng-src="{{vm.user.img}}">
+            </div>
         </div>
-        <div class="info-user-img">
-            <img  ng-src="images/autoava">
+        <div class="user-data">
+            <div>NAME:
+            <p ng-bind="vm.user.name"></p>
+            </div>
+            <div>SURNAME:
+            <p ng-bind="vm.user.surname"></p>
+            </div>
+            <!--<p ng-bind="vm.user.age"></p>-->
+            <div>GENDER:
+            <p ng-bind="vm.user.gender"></p>
+            </div>
+            <div>EMAIL:
+            <p ng-bind="vm.user.email"></p>
+            </div>
+            <!--<p ng-bind="vm.user.data"></p>-->
         </div>
     </div>
-    <div class="user-data">
-        <div>NAME:
-        <p ng-bind="vm.user.name"></p>
+    <div class="userPostPlace">
+        <div ng-repeat="post in vm.userPosts" >
+            <div class="userPOSTS-item" ui-sref="post({id: post._id})">
+                <div class="userPOSTS-item--img">
+                <img ng-src="{{post.img}}">
+                </div>
+                <div class="userPOSTSfullname">
+                <p ng-bind="post.title"></p>
+                </div>
+                <p class="userPOSTS-item--subtitle" ng-bind="post.date | date"></p>
+            </div>    
         </div>
-        <div>SURNAME:
-        <p ng-bind="vm.user.surname"></p>
-        </div>
-        <!--<p ng-bind="vm.user.age"></p>-->
-        <div>GENDER:
-        <p ng-bind="vm.user.gender"></p>
-        </div>
-        <div>EMAIL:
-        <p ng-bind="vm.user.email"></p>
-        </div>
-        <!--<p ng-bind="vm.user.data"></p>-->
     </div>
 </div>

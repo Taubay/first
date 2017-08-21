@@ -6,13 +6,25 @@ function Auth ($http , $rootScope , $cookies , $state)
     $rootScope.currentUser = $cookies.getObject("user") ;
     console.log($rootScope.currentUser);
     return{
+        /**/
         signup: function(user){
-            return $http.post("/api/signup" , user).success(function(data){
-                $rootScope.currentUser = data ; 
-                console.log(data);
-                console.log("okk");
-                $state.go('profile');
-            })
+            var fd = new FormData();
+            fd.append('image', user.image);
+            fd.append('name', user.name);
+            fd.append('surname', user.surname);
+            fd.append('email', user.email);
+            fd.append('gender', user.gender);
+            fd.append('password', user.password);
+            
+                return $http.post('/api/signup', fd, {
+               transformRequest: angular.identity, //настраиваем наши хедеры для отправки картинки
+               headers: {'Content-Type': undefined}
+            }).success(function(data){
+                    $rootScope.currentUser = data ;
+                    $state.go('profile');
+                })
+            
+            
         },
         
         login: function(user){

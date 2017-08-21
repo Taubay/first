@@ -39,8 +39,8 @@ router.put('/' , function(req , res , next){
         coritem.description = req.body.description;
         coritem.img = req.body.img;
         coritem.save(function(){
-            console.log("all in server is ok");
-            console.log(req.body);
+            // console.log("all in server is ok");
+            // console.log(req.body);
             res.status(200).end();
         })
     })
@@ -51,10 +51,33 @@ router.get('/:iditem' , function(req , res , next ){
     })
 })
 router.get('/home/all', function(req , res , next ){
-         Blog.find().populate('user' , 'name email').exec(function(err, blogs) //all info fron base in 'blogs'
+         Blog.find().populate('user' , 'name img').exec(function(err, blogs) //all info fron base in 'blogs'
             {
             res.status(200).send( blogs ); // give ans for patient
             })
     })
+router.get('/user/:idmyuser' , function(req , res , next ){
+    Blog.find({user:req.params.idmyuser}).exec(function(err , items ){
+        console.log(items);
+        res.status(200).send(items);
+    })
+})
 
+router.get('/:key/search', function(req , res , next ){
+     Blog.find({
+        $or: [
+            {
+                title:new RegExp(req.params.key , 'i')
+            },
+            {
+                description:new RegExp(req.params.key , 'i')
+            }
+            ]
+                
+     }).exec(function(err, result) //all info fron base in 'blogs'
+        {
+            //console.log(blogs);
+        res.status(200).send( result ); // give ans for patient
+        })
+})
 module.exports = router ;

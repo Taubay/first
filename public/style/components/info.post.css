@@ -53,59 +53,12 @@
     display: flex;
     justify-content:center;
     align-items:center;}
-.post-comment {
-    display:grid;
-    justify-content:center;
-    align-items:center;
-    width:45%;
-    min-height:190px;}
-.input-comment{
-    width:200px;
-    height:90px;
-    border-radius: 9px;
-    border: 2px solid #c8b084;}
-.commTitle p {
-    display: flex;
-    font-size: 20px;
-    justify-content:center;
-    color:#844a1a;}
-.inputcomm{
-    display: inherit;
-    width: 100% !important;
-    padding: 0px 40px;
-    width: 200px;}
-.inputcomm input{
-    border-radius: 9px;
-     width: 200px;
-    border: 2px solid #965b28;}
-.postallcomments{
-    min-width: 280px;
-    height:40px;
-    flex-flow: row wrap;
-    display:flex;
-    justify-content:center;
-    align-items:center;}
-.comm2p{
-    min-width: 80%;
-    min-height: 35px;
-    background: #fff;
-    border: 1px solid #b98932;
-    border-radius:9px;
-    display: grid;
-    justify-content: center;}
-.commp1{
-    min-width:20px;
-    color:#965b28;
-    font-size:15px;}
-.commp2{
-    min-width:20px;
-    color:chocolate;
-    font-size:12px;}
 .likes-post{
-    width:55%;
-    height: 190px;
+    width: 100%;
+    height: 25px;
     display: grid;
-    justify-content: center;}
+    justify-content: flex-start;
+    padding: 0 20%;}
 .post-place{
     cursor: pointer;
     display: flex;
@@ -114,8 +67,8 @@
     border-radius: 5px;
     border: 2px solid #c8b084;
     background-color: #fff;
-    width: 120px;
-    height: 40px;}
+    width: 70px;
+    height: 20px;}
 .personWhoLiked{
     display:grid;
     justify-content: center;
@@ -135,3 +88,63 @@
     justify-content: center;
     align-items: center;
     font-size: 22px;}
+.postLike{
+    width: 50px ; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.postHeart{
+    width: 20px;
+    height: 20px;
+    border-left:2px solid #c8b084;}
+.post-comment{
+    width:45%;
+    display: grid;
+    justify-content:center;}
+.commTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;}
+.inputcomm{
+    display: flex;
+    justify-content: center;
+    border-radius: 13px;
+    border: 2px solid #b33833;}
+.input-comment{
+    max-height: 96px;
+    max-width : 196px;
+    outline: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;}
+.subcomm{
+    max-height: 96px;
+    max-width: 196px;
+    outline: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;}
+.postallcomments{
+    padding: 2px 0;
+    width: 250px;
+    min-height: 40px;
+    display: -webkit-box;
+    justify-content: center;
+    align-items: center;}
+.comm2p{
+    width: 250px;
+    min-height: 20px;
+    border: 2px solid #903c1a;
+    border-radius: 10px;
+    padding-left: 5px;
+    background: #fff;
+}
+.commp1{
+    display: flex;
+    justify-content: flex-start;
+}
+.commp1 img{
+    height: 15px;
+    width: 15px;
+}

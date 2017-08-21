@@ -1,12 +1,18 @@
 .myuserpage{
     width: 100%;
     border-radius: 9px; 
-    display: flex;
+    display: block;
     justify-content: center;
     background-image: url(../../images/forsmall.jpg);}
+.dataUser{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
 .info-user--img{
     width: 45%;
-    height: 300px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;}
@@ -44,5 +50,42 @@
     justify-content:space-around;
     border-radius: 15px;
     border: 2px solid #c8b084;
-    align-items:center;
+    align-items:center;}
+.userPOSTS-item{
+    margin-right: 10px;
+    height: 265px;
+    background: #e4c26a;
+    border-radius: 9px;
+    width:200px;
+    padding: 10px;
+    cursor:pointer;
+    position:relative;}
+.userPOSTS-item--img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: #ad8f42;
+    border-radius: 9px;}
+.userPOSTS-item--img img{
+    height: 200px;
+    border-radius: 9px;}
+.userPOSTSfullname{
+    width:100%;
+    height: 15px;
+    overflow: hidden;
+    padding: 0px 10px;}
+.userPOSTS-item--subtitle{
+    font-size:13px;
+    line-height:20px;
+    color:rgba(0,0,0,0.6);
+    padding: 0px 10px;}
+.userPOSTS-item:hover{
+    background:#76b2c5;}
+.userPostPlace{
+    width: 100%;
+    padding: 40px 10px 10px;
+    display: flex;
+    flex-flow: row wrap;
 }

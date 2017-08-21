@@ -60,4 +60,14 @@ function HeaderCtrl ($http , $modal , Auth , $rootScope)
         open.show();
     })  
     }
+    vm.find = function (){
+        if(vm.search.length>1){
+            $http.get('/api/blogs/' + vm.search + "/search").success(function(dataSearch){
+                vm.dataSearch = dataSearch ;
+            })
+        }
+        else{
+            vm.dataSearch = [] ;
+        }
+    }
 }

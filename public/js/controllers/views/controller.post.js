@@ -1,13 +1,15 @@
 angular.module("decode")
 .controller("PostCtrl",PostCtrl);
-PostCtrl.$inject = ["$http" , "$state"]; // подключение
-function PostCtrl ($http , $state) 
+PostCtrl.$inject = ["$http" , "$state" , "$modal"]; // подключение
+function PostCtrl ($http , $state , $modal ) 
 {
     var vm = this;
     //vm.quanifilike = 0 ;
-    console.log(vm.quanifilike);
+    // console.log(currentUser);
+
     $http.get('/api/blogs/' + $state.params.id).success(function(item){
-    vm.item = item ; 
+    vm.blog = item ; 
+    console.log(item);
     })
     $http.get('/api/comments/' + $state.params.id).success(function(comments){
           vm.allcomms = comments ; 
@@ -21,14 +23,24 @@ function PostCtrl ($http , $state)
             vm.allcomms.push(datacomm);
         })
     }
+    $http.get('/api/likes/' + $state.params.id).success(function(dislike) {
+        if(dislike) { 
+                vm.vaildLike = "images/heart.png";
+            }
+        else {
+                vm.vaildLike = "images/heart2.png";
+            }
+    })
     vm.myLike = function() {
         $http.post('/api/likes/' + $state.params.id).success(function(like){
             
             if(like.dislike) { 
                 vm.alllikes-- ; 
+                vm.vaildLike = "images/heart.png";
             }
             else{
                 vm.alllikes++;
+                vm.vaildLike = "images/heart2.png";
             }
                 console.log(like);
                // vm.mylike = like ;
@@ -47,45 +59,51 @@ function PostCtrl ($http , $state)
         vm.alllikes = likes.likes;
         console.log(vm.alllikes);
     })
-}
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            // vm.comment = function() {
-    //     $http.post('/api/comment' , {
-    //         description:vm.comm,
-    //         blog:$state.params.id,
-    //     } )
-    //     .success(function(dataComm){
-    //         vm.onecomment = dataComm ; 
-    //     }) 
-    // }
-    // $http.get('/api/comment/' + $state.params.id).success(function(comms){
-    //     vm.allcomments = comms;
+    
+    vm.deleteComm = function (item){
+        $http.delete('/api/comments/one/' + item._id).success(function(){
+            var index=vm.allcomms.indexOf(item);
+            vm.allcomms.splice(index, 1)
+        })
+    }
+    // vm.editComm = function (item){
+    //     var open=$modal({
+    //     container: "body",
+    //     templateUrl: "views/editComment.html" , 
+    //     controller: "EditCCtrl",
+    //     controllerAs: "vm" , 
+    //     show: false,
+    //     resolve:{
+    //         CorComm:function(){
+    //             return item;
+    //         }
+    //     }
     // })
+    // open.$promise.then(function(){
+    //     open.show();
+    // })
+    // }
+    vm.functionComm = function(commId) {
+        $http.post('/api/likes/comms/' + commId).success(function(like){
+            
+            if(like.dislike) { 
+                vm.commLikes-- ; 
+                vm.heartComm = "images/heart.png";
+            }
+            else{
+                vm.commLikes++;
+                vm.heartComm = "images/heart2.png";
+            }
+                console.log(like);
+        }) 
+    }
+    vm.justdoit = function(commId){
+        $http.get('/api/likes/comms/' + commId).success(function(likes){
+            console.log("in Ctrl like");
+            vm.commLikes = likes.likes;
+            console.log(vm.commLikes);
+        })
+    }
+    
+}
+

@@ -1,23 +1,47 @@
 angular.module("decode")
 .controller("SettingsCtrl",SettingsCtrl);
-SettingsCtrl.$inject = ["$http", "Auth"]; // подключение
-function SettingsCtrl ($http , Auth) 
+SettingsCtrl.$inject = ["$http", "Auth", '$rootScope']; // подключение
+function SettingsCtrl ($http , Auth,$rootScope) 
 {
     var vm = this ; 
+     
+    vm.user = $rootScope.currentUser;
     vm.changedata = function(){
-        Auth.changeDataAcc({
-            name:vm.newuserdata.name,
-            surname:vm.newuserdata.surname,
-            gender:vm.newuserdata.gender,
-            email:vm.newuserdata.email,
-            password:vm.newuserdata.password,
-            img:vm.file
-        })
+        Auth.changeDataAcc(vm.user)
     }
+    
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+    
+            reader.onload = function (event) {
+                // $('#blah').attr('src', e.target.result);
+                document.getElementById("settimg").src=event.target.result;
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    setTimeout(function(){
+        document.getElementById("file")
+            .addEventListener("change", function() {
+                console.log(this);
+                readURL(this);
+            });
+    
+    }, 1000)
+    
+    
+    
 }
 
 
 
+
+// $("#imgInp").change(function(){
+//     readURL(this);
+// });
 
 
 

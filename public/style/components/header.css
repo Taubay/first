@@ -18,6 +18,7 @@
      border-left:2px solid #8389b7;}
  .avatar img{
      height:100%;
+     border-radius: 8px;
      width:100%;}
  .nav {
      height:60px;
@@ -34,4 +35,47 @@
  .nav ul li:hover{
      background: #0077b7;
      color: #fff;}
- 
+ .nav-search{
+     width: 150px;
+     height: 100%;
+     display: flex;
+     align-items:center;
+     position: relative;
+     padding-right: 20px;}
+.nav-search input{
+    height: 30px;
+    margin-left: auto;
+    border-radius: 15px;
+    padding: 0px 40px 0px 20px;
+    width: 50%;
+    transition:.3s;
+    border:1px solid #e7e7e7;
+    outline:none;}
+.nav-search input:focus{
+    width:100%;
+    transition:.3s;}
+.nav-search img {
+    position: absolute;
+    height: 20px;
+    top:20px;
+    right: 30px;}
+.search-dropdown{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background:#fff;
+    border-bottom: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;}
+.search-dropdown li{
+    height: 40px;
+    cursor: pointer;
+    padding: 0 20px;
+    line-height: 40px;}
+.search-dropdown li:hover{
+    background-color: #f5f8f9;}
+.search-dropdown li:last-child{
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;}

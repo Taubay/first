@@ -9,27 +9,27 @@
             <p> SETTINGS</p>
         </div>
         <div class="allSettings">
-            <div class ="form-filed">
-    		        <!--<span class="autoava">-->
-	      		     <!--   <img class ="form-filedimg" ng-src="{{vm.fakeAva}}">-->
-    		        <!--</span>-->
-    				<input class="input-file" type="file" file-model="vm.file" >
+            <div class="changeAvaSettings">
+    		        <span class="PlaceImgSett">
+	      		        <img id="settimg" class ="ValidAvaSett" ng-src="{{vm.user.img}}">
+    		        </span>
+    				<input id="file" class="inputAvasett" type="file" file-model="vm.file" >
     		 </div>
             <div>
-                <input type="text" ng-model="vm.newuserdata.name" placeholder="name" />
+                <input type="text" ng-model="vm.user.name" placeholder="name" />
             </div>
             <div>
-                <input type="text" ng-model="vm.newuserdata.surname" placeholder="surname" />
+                <input type="text" ng-model="vm.user.surname" placeholder="surname" />
             </div>
             <div>
-                <input type="text" ng-model="vm.newuserdata.email" placeholder="mail" />
+                <input type="text" ng-model="vm.user.email" placeholder="mail" />
             </div>
             <div class="change-gender">
-                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.newuserdata.gender"><span>Male</span>
-        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.newuserdata.gender"><span>Female</span>
+                <input type="radio" name="poll" id="poll" value="male" ng-model="vm.user.gender"><span>Male</span>
+        		<input type="radio" name="poll" id="poll" value="female" ng-model="vm.user.gender"><span>Female</span>
             </div>
         	<div>
-         	    <input type="text" ng-model="vm.newuserdata.password" placeholder="password"/>
+         	    <input type="text" ng-model="vm.user.password" placeholder="password"/>
         	</div>
         	<div>
         		<input type="submit" value="CHANGE" ng-click="vm.changedata() ; $hide()"/>
