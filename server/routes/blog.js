@@ -80,4 +80,21 @@ router.get('/:key/search', function(req , res , next ){
         res.status(200).send( result ); // give ans for patient
         })
 })
+router.get('/home/:page/pagination' , function(req , res , next){
+    
+    Blog.count().exec(function(err , total){
+              Blog.find().populate('user' , 'name img')
+              .sort({date:-1})
+              .skip(req.params.page*12) 
+              .limit(12)
+              .exec(function(err, blogs) //all info fron base in 'blogs'
+                        {
+                        res.status(200).send( {
+                            posts : blogs , 
+                            total : total ,
+                            pages : Math.ceil(total/12)
+                        } ); // give ans for patient
+              })
+    })
+})
 module.exports = router ;

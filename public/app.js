@@ -1,5 +1,5 @@
 angular.module('decode', [
-  'ui.router','mgcrea.ngStrap', 'ngResource' , 'naif.base64' , "ngCookies"
+  'ui.router','mgcrea.ngStrap', 'ngResource' , 'naif.base64' , "ngCookies" , "btford.socket-io"
   ])
  .config(routeConfig);
  routeConfig.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
@@ -30,6 +30,12 @@ angular.module('decode', [
   url: '/user/:id',
   templateUrl: 'views/user.html',
   controller: 'UserCtrl',
+  controllerAs: 'vm'
+  })
+  .state('chat', {
+  url: '/chat',
+  templateUrl: 'views/chat.html',
+  controller: 'ChatCtrl',
   controllerAs: 'vm'
   })
   console.log("2");

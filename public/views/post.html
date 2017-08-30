@@ -40,29 +40,40 @@
         <!--    </div>-->
         <!--</div>-->
     </div>
-    <div class="post-comment">
-        <div class="commTitle">
-            <p >Написать комментарий</p>
-        </div>
-        <div class="inputcomm" ng-if="!vm.newuser">
-            <textarea placeholder="input for comment" ng-model="vm.comm" class="input-comment"/></textarea>
-            <input type="submit" class="subcomm"ng-click="vm.comment(); $hide"/>
-        </div>
-        <div class="postallcomments" ng-repeat =" item in vm.allcomms" ng-change="vm.justdoit(item.id)"> 
-            <div class="comm2p">
-                <div class="commp1">
-                    <img ng-src="{{item.user.img}}">
-                    <p ng-bind="item.user.name"></p>
-                    <!--<p ng-bind="vm.blog.user"></p>-->
-                    <!--who wrote a comment item.user._id-->
-                </div>    
-                <p class="commp2" ng-bind="item.description"></p> 
+    <div class="EditCoutComm">
+        <div class="post-comment">
+            <div class="commTitle">
+                <p >Написать комментарий</p>
             </div>
-            <img ng-if="((currentUser._id == vm.blog.user) || (currentUser._id == item.user._id))" src="images/garbage.svg" ng-click="vm.deleteComm(item)" width="30px" height="30px">
-            <img ng-if="(currentUser._id == item.user._id)" src="images/wrench.png" ng-click="vm.editComm()" width="30px" height="30px">
-            <div class="commStatus">
-                <p class="commLikes" ng-bind="vm.commLikes.length"></p>
-                <img class="commHeart" ng-click="vm.functionComm(item.id)" ng-src="{{vm.heartComm}}">
+            <div class="inputcomm" ng-if="!vm.newuser">
+                <textarea placeholder="input for comment" ng-model="vm.comm" class="input-comment"/></textarea>
+                <input type="submit" class="subcomm"ng-click="vm.comment(); $hide"/>
+            </div>
+            <!--ng-change="vm.justdoit(item.id)"-->
+            <div class="postallcomments" ng-repeat =" item in vm.allcomms"> 
+                <div class="comm2p">
+                    <div class="commp1">
+                        <img ng-src="{{item.user.img}}">
+                        <p ng-bind="item.user.name"></p>
+                        <!--<p ng-bind="vm.blog.user"></p>-->
+                        <!--who wrote a comment item.user._id-->
+                    </div>    
+                    <p class="commp2" ng-bind="item.description"></p> 
+                    <!--<p ng-bind="item._id"></p> -->
+                </div>
+                <img ng-if="((currentUser._id == vm.blog.user) || (currentUser._id == item.user._id))" src="images/garbage.svg" ng-click="vm.deleteComm(item)" width="30px" height="30px">
+                <img ng-if="(currentUser._id == item.user._id) && (!vm.CommStatus)" src="images/wrench.png" ng-click="vm.editComm(item)" width="30px" height="30px">
+                <div class="commStatus">
+                    <p class="commLikes" ng-bind="vm.commLikes.length"></p>
+                    <img class="commHeart" ng-click="vm.functionComm(item.id)" ng-src="{{vm.heartComm}}">
+                </div>
+            </div>
+        </div>
+        <div ng-if="vm.CommStatus" class="EditCommPlace">
+            <p>Меняй коммент</p>
+            <div class="ChangeComm">
+                <textarea ng-model="vm.commItem.description"></textarea>
+                <input ng-click="vm.Editcomment(vm.commItem)" class="InputEditComm" value="send">
             </div>
         </div>
     </div>

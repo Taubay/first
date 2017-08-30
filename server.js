@@ -41,6 +41,11 @@ store: new MongoStore({ mongooseConnection: mongoose.connection })
             
 app.use(require("./server/routes"))
 
-app.listen(process.env.PORT, function(){
+var server = app.listen(process.env.PORT, function(){
     console.log("express.server runningport " +  process.env.PORT)
 })
+var io = require("socket.io")();
+io.attach(server);
+
+var socketEvents = require("./server/socket") 
+socketEvents(io);

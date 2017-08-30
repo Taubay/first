@@ -70,4 +70,7 @@ function HeaderCtrl ($http , $modal , Auth , $rootScope)
             vm.dataSearch = [] ;
         }
     }
+    vm.chat = function () {
+        
+    }
 }

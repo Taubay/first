@@ -5,7 +5,7 @@ function SignupCtrl ($http , Auth)
 {
     var vm = this;
     vm.fakeava  = "images/photo-camera2.png";
-    vm.img = "images/autoava.jpg";
+    // vm.user.img = "images/autoava.jpg";
     vm.signup = function(){
         Auth.signup({
             // img:vm.img,

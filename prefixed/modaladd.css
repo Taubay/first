@@ -1,0 +1,46 @@
+.modal{
+    position: fixed; 
+    width: 100%;
+    height:100vh;
+    background: rgba( 0,0,0,0.6);
+    top:0;
+    left:0;
+    display:-ms-flexbox!important;
+    display:flex!important; /*библиотека модала мешает поэтому ставим приоритет*/
+    -ms-flex-pack:center;
+        justify-content:center;
+    -ms-flex-align: center;
+        align-items: center;}
+.modal-wrapper{
+    background-image: url(../../images/forsmall.jpg);
+    border-radius: 9px;}
+.imgcross{
+    width:100%;
+    height:20px;
+    right:0;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;}
+.imgcrossplace{
+    width:18px;
+    height:18px;
+    border-radius: 9px;}
+.imgcross img{
+    width:100%;
+    height:100%;}
+.imgcrossplace :hover{
+    background:#0077b7;
+    border-radius: 9px;}
+.addname{
+    width:100%;}
+.addname p {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 30px;
+    color: #a9a9a9;}

@@ -21,8 +21,8 @@ router.delete('/one/:idcomm',function(req,res,next){
             res.status(200).end();
         })
 })
-router.put('/correct/:idcomm',function(req,res,next){
-        Comment.findById(req.params.idcomm).exec(function(err , corComment){
+router.put('/:idComm',function(req,res,next){;
+        Comment.findById(req.body._id).exec(function(err , corComment){
             corComment.description = req.body.description ;
             corComment.save(function(){
                 res.status(200).end();

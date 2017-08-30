@@ -1,0 +1,9 @@
+.CommEdit{
+    width: 100%;
+    border-radius: 9px;
+    background-image: url(../../images/forsmall.jpg);}
+.CommEdit-wrapper{   
+    display: -ms-flexbox;   
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;}

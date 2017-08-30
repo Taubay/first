@@ -12,4 +12,16 @@
 		</div>
 		<p class="postshome-item--subtitle" ng-bind="post.date | date"></p>
 	</div>
+
 </div>
+	<div class="pagination">
+		<span ng-click="vm.prevPage()">
+			prev
+		</span>
+		<span ng-repeat="item in vm.pages track by $index" ng-bind="$index + 1" ng-click="vm.openPage($index)" ng-class="{'active': vm.currentPage == $index}">
+			
+		</span>
+		<span ng-click="vm.nextPage()">
+			next
+		</span>
+	</div>

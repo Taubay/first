@@ -1,0 +1,109 @@
+.myuserpage{
+    width: 100%;
+    border-radius: 9px; 
+    display: block;
+    -ms-flex-pack: center;
+        justify-content: center;
+    background-image: url(../../images/forsmall.jpg);}
+.dataUser{
+    width: 100%;
+    height: 300px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
+.info-user--img{
+    width: 45%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
+.user-ramm{
+    height: 300px;
+    width: 300px;
+    z-index: 2;
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;}
+.user-ramm img{
+    height:100%;
+    width:100%;
+    z-index:1;
+    position:absolute;}
+.info-user-img {
+    height:250px;
+    width:250px;
+    z-index:1;}
+.info-user-img img{
+    width: 100%;
+    background:#fff;
+    height: 100%;}  
+.user-data{
+    height: 300px;
+    display: grid;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 55%;}
+.user-data div {
+    min-width:300px;
+    height: 65px;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
+    border-radius: 15px;
+    border: 2px solid #c8b084;
+    -ms-flex-align:center;
+        align-items:center;}
+.userPOSTS-item{
+    margin-right: 10px;
+    height: 265px;
+    background: #e4c26a;
+    border-radius: 9px;
+    width:200px;
+    padding: 10px;
+    cursor:pointer;
+    position:relative;}
+.userPOSTS-item--img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    background: #ad8f42;
+    border-radius: 9px;}
+.userPOSTS-item--img img{
+    height: 200px;
+    border-radius: 9px;}
+.userPOSTSfullname{
+    width:100%;
+    height: 15px;
+    overflow: hidden;
+    padding: 0px 10px;}
+.userPOSTS-item--subtitle{
+    font-size:13px;
+    line-height:20px;
+    color:rgba(0,0,0,0.6);
+    padding: 0px 10px;}
+.userPOSTS-item:hover{
+    background:#76b2c5;}
+.userPostPlace{
+    width: 100%;
+    padding: 40px 10px 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+}

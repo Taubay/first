@@ -1,0 +1,15 @@
+.pagination{
+    width:100%;
+    display: flex ;
+    justify-content:center;
+    padding:30px 0 0;}
+.pagination span {
+    height: 40px;
+    padding:0 10px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;}
+.pagination span.active{
+    background-color: #e4c26a;}

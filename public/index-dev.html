@@ -17,7 +17,6 @@
 					<li ui-sref="profile" ng-if="vm.newuser">PROFILE</li>
 					<li ng-if="!vm.newuser" ng-click="vm.login()" >LOGIN</li>
 					<li ng-if="!vm.newuser" ng-click="vm.signup()" >SIGNUP</li>
-					<li ng-if="vm.newuser" ui-sref="chat" >CHAT</li>
 				</ul>
 			</div>
 			<div class="nav-search">
@@ -58,11 +57,7 @@
 	    <script type="text/javascript" src="js/controllers/auth/controller.settings.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/controller.delete.js"></script>
 	    <script type="text/javascript" src="js/controllers/views/controller.editComm.js"></script>
-	    <script type="text/javascript" src="js/controllers/views/controller.chat.js"></script>
 	    <script type="text/javascript" src="js/controllers/auth/service.auth.js"></script>
-	    <script type="text/javascript" src="js/sockets/service.socket.js"></script>
-	    <script type="text/javascript" src="js/sockets/socket.io.js"></script>
-	    <script type="text/javascript" src="js/sockets/directive.socket.js"></script>
 	</body>
 </html>
 

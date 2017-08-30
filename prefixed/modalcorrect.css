@@ -1,0 +1,34 @@
+.modalcor{
+    position: fixed; 
+    width: 100%;
+    height:100vh;
+    background: rgba( 0,0,0,0.6);
+    top:0;
+    left:0;
+    display:-ms-flexbox!important;
+    display:flex!important; /*библиотека модала мешает поэтому ставим приоритет*/
+    -ms-flex-pack:center;
+        justify-content:center;
+    -ms-flex-align: center;
+        align-items: center;}
+.modalcor-wrapper{
+    border-radius: 9px;
+    background-image: url(../../images/forsmall.jpg);;}
+.imgcancel{
+    width:100%;
+    height:20px;
+    right:0;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;}
+.imgcancelplace{
+    width:18px;
+    height:18px;}
+.imgcancel img{
+    width:100%;
+    height:100%;}
+.imgcancelplace :hover{
+    background:#0077b7;
+    border-radius: 9px;}
+

@@ -1,0 +1,26 @@
+<div class="chat">
+    <div class="chatRooms">
+        <span ng-click="vm.changeRoom('room1')">Room1</span>
+        <span ng-click="vm.changeRoom('room2')">Room2</span>
+        <span ng-click="vm.changeRoom('room3')">Room3</span>
+    </div>
+    <div class="ChatMessagesPlace">
+        <div class="ChatMessages">
+            <!--<div ng-repeat="item in vm.">-->
+                
+            <!--</div>-->
+            <div ng-repeat="message in vm.messages">
+                <img ng-src="{{message.ava}}">
+                <span>
+                    <p1 ng-bind="message.author"></p1>
+                    <p ng-bind="message.message"></p>
+                </span>
+            </div>
+            
+        </div>    
+        <div class="myInputToSMS">
+            <textarea class="inputSMS" placeholder="Пиши сюда падла" ng-model="vm.text"/></textarea>
+            <input class="SubmitChat" type="text" value="SEND" ng-click="vm.newText()"/>
+        </div>
+    </div>
+</div>

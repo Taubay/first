@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="decode">  <!--modules name is decode -->
+	<head>
+	  <meta charset ="UTF-8">
+	  <base href="/"> <!--чтобы работал 5 -->
+	  <title>TAUBAY2</title>
+	  <link rel="stylesheet" href="main.min.css" type="text/css" />
+	</head>
+	<body>
+		<header class="header" ng-controller="HeaderCtrl as vm">
+			<div class="logo">
+				<img src="images/logo.png" >
+			</div>
+			<div class="nav">
+				<ul>
+					<li ui-sref="home">HOME</li>
+					<li ui-sref="profile" ng-if="vm.newuser">PROFILE</li>
+					<li ng-if="!vm.newuser" ng-click="vm.login()" >LOGIN</li>
+					<li ng-if="!vm.newuser" ng-click="vm.signup()" >SIGNUP</li>
+				</ul>
+			</div>
+			<div class="nav-search">
+				<input type="text" placeholder="search" ng-model="vm.search" ng-keyup="vm.find()"/>
+				<img src="images/search.svg">
+				<ul class="search-dropdown" ng-if='vm.dataSearch && vm.dataSearch.length>0'>
+					<li ng-repeat="item in vm.dataSearch" ng-bind="item.title" ui-sref="post({id:item._id})" ng-click="vm.dataSearch = [] ; vm.search = null"></li>
+				</ul>
+			</div>
+			<div class="avatar" ng-if="vm.newuser" >
+			<img  ng-src="{{currentUser.img}}" bs-dropdown>
+				<ul class="dropdown-menu" role="menu">
+					<li ng-click="vm.logout()">LOGOUT</li>
+					<li ng-click="vm.settings()">SETTINGS</li>
+					<li ng-click="vm.deleteUser()">DELETE</li>
+				</ul>
+			</div>
+		</header>
+		<main class="wrapper" ui-view></main>
+	    <script type="text/javascript" src="app.min.js"></script>   <!--connect to server  -->
+	    <script type="text/javascript" src="templates.js"></script>   <!--connect to server  -->
+	</body>
+</html>
+
+
+	 <!--    <input type="text" ng-model="vm.model"/>-->
+	 <!--    <span ng-bind = "vm.model"></span>-->
+		<!--<span>{{vm.mode}}</span>	     -->
+
+	    <!--<div ng-controller="ProfileCtrl as vm"> -->
+    	<!--    <input type="text" ng-model="vm.title" / >-->
+    	<!--    <textarea ng-model="vm.description">-->
+    	<!--    </textarea>-->
+    	<!--    <button ng-click="vm.func()">ok</button>-->
+    	    
+    	<!--    <div ng-repeat="item in vm.blogs">-->
+    	<!--        <p ng-bind="item.title"></p>-->
+    	<!--        <p ng-bind="item.description"></p>-->
+    	<!--        <p ng-bind="item.date"></p>-->
+    	<!--        <hr color="red">-->
+    	<!--    </div>-->
+    	<!--    <p> {{vm.title}} </p>-->
+    	<!--   <p ng-bind="vm.title"></p> <!-- ng cleans all in p -->
+	    <!--</div>-->
+	    <!--<div ng-repeat="a in [12, 44, 15]">  <!--цикл -->
+	    <!--    <p ng-bind= "a"></p>-->
+	       <!--// privet-->
+	    <!--</div>-->
+	    <!-- <p> {{vm.title}} </p>-->

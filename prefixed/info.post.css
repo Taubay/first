@@ -3,21 +3,28 @@
     border-radius: 9px;
     background-image: url(../../images/forsmall.jpg);}
 .info-post{   
+    display: -ms-flexbox;   
     display: flex;
-    justify-content: center;}
+    -ms-flex-pack: center;
+        justify-content: center;}
 .info-post--img{
     width: 45%;
     height: 320px;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;}
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
 .info-ramm{
     height: 300px;
     width: 300px;
     z-index: 2;
     position: absolute;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;}
+    -ms-flex-pack: center;
+        justify-content: center;}
 .info-ramm img{
     height:100%;
     width:100%;
@@ -35,35 +42,47 @@
     height: 320px;
     width:55%;
     display: grid;
-    justify-content:center;
-    align-items:center;}
+    -ms-flex-pack:center;
+        justify-content:center;
+    -ms-flex-align:center;
+        align-items:center;}
 .info-post--desc div{
     height: 85px;
     min-width:296px;
+    display: -ms-flexbox;
     display: flex;
     background:#fff;
-    justify-content:space-around;
-    align-items:center;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
+    -ms-flex-align:center;
+        align-items:center;
     border-radius: 15px;
     border: 2px solid #c8b084;}
 .info-post--desc span{
     font-size: 20px;}
 .rate-post{
     width:100%; 
+    display: -ms-flexbox; 
     display: flex;
-    justify-content:center;
-    align-items:center;}
+    -ms-flex-pack:center;
+        justify-content:center;
+    -ms-flex-align:center;
+        align-items:center;}
 .likes-post{
     width: 100%;
     height: 25px;
     display: grid;
-    justify-content: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
     padding: 0 20%;}
 .post-place{
     cursor: pointer;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     border-radius: 5px;
     border: 2px solid #c8b084;
     background-color: #fff;
@@ -71,29 +90,40 @@
     height: 20px;}
 .personWhoLiked{
     display:grid;
-    justify-content: center;
-    align-items: center;}
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
 .personWhoLiked p{
     width:100px;
     height:40px;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     border-radius: 8px;
     border: 2px solid #b17f47;}
 .post-place:hover{
     background-color: #0077b7;}
 .likeQ{
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     font-size: 22px;}
 .postLike{
     width: 50px ; 
     height: 100%;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;}
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
 .postHeart{
     width: 20px;
     height: 20px;
@@ -101,16 +131,22 @@
 .post-comment{
     width:45%;
     display: grid;
-    justify-content:center;}
+    -ms-flex-pack:center;
+        justify-content:center;}
 .commTitle{
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     height: 30px;
     width: 100%;}
 .inputcomm{
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     border-radius: 13px;
     border: 2px solid #b33833;}
 .input-comment{
@@ -130,8 +166,10 @@
     width: 250px;
     min-height: 40px;
     display: -webkit-box;
-    justify-content: center;
-    align-items: center;}
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
 .comm2p{
     width: 250px;
     min-height: 20px;
@@ -140,43 +178,30 @@
     padding-left: 5px;
     background: #fff;}
 .commp1{
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;}
+    -ms-flex-pack: start;
+        justify-content: flex-start;}
 .commp1 img{
     height: 15px;
     width: 15px;}
 .EditCoutComm{
     width: 100%;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;}
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
 .EditCommPlace{
     width: 55%;
-    height: 65px;
+    /* height: 100%; */
     display: grid;
-    justify-content: center;
-    align-items: center;}
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;}
 .InputEditComm{
-    width: 40px;
-    height: 100px;}
-.ChangeComm{
-    margin-top: 5px;
-    border: 4px solid #ce3e48;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px;
-    
-}
-.ChangeComm textarea{
+    width: 100px;
     height: 100px;
-    border-right: 4px solid #ce3e48;
-
-}
-.EditCommPlace p{
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    color: #ea6060;
 }

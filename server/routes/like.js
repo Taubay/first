@@ -8,18 +8,18 @@ router.get('/:blogid' , function(req, res, next) {
             res.status(200).send({likes: likes});
         })
     })
-router.get('/:idlikes' , function(req, res, next) {
+router.get('/:idlikes/me' , function(req, res, next) {
 Like.findOne({
               blog:req.params.idlikes,
-              user:req.user.id 
+              user:req.user._id 
             }).exec(function(err,item){
             console.log(item);
                  if(err){}
                  if(!item){
-                            res.status(200).send({dislike: false})  
+                            res.status(200).send({dislike: true})  
                             } 
                 else{
-                            res.status(200).send({dislike: true})  
+                            res.status(200).send({dislike: false })  
                      } 
                 }) 
         })
